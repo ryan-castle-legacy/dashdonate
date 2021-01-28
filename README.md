@@ -1,5 +1,7 @@
 ## DashDonate.org
 
+![DashDonate.org Logo](https://github.com/ryan-castle-legacy/dashdonate/blob/main/Logo.png)
+
 When I was first diagnosed I was always supported by charities. One of the things that I found was that smaller charities never had anyone to help them, and lots of them go bankrupt.
 
 **My mission** was to make it easier for charities to receive donations and raise awareness about the impact they make.
