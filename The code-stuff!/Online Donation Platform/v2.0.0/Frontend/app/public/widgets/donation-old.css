@@ -1,0 +1,762 @@
+#dd_donation_form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	font-family: sans-serif;
+	font-size: 13px;
+	width: 100%;
+	max-width: 340px;
+	text-align: center;
+}
+
+#dd_donation_form a[href] {
+	text-decoration: none;
+}
+
+#dd_donation_form #dd_donation_form_main {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+	max-width: 340px;
+	min-height: 420px;
+	height: auto;
+	padding: 0px 0px 60px 0px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.125);
+	border: 1px solid rgba(0, 0, 0, 0.0825);
+	overflow: hidden;
+	-webkit-transition: 2.5s;
+	-moz-transition: 2.5s;
+	-ms-transition: 2.5s;
+	-o-transition: 2.5s;
+	transition: 2.5s;
+}
+
+#dd_donation_form #dd_donation_form_main[stage='disabled'] .dd_donation_form_stage[stage='disabled'],
+#dd_donation_form #dd_donation_form_main[stage='charity'] .dd_donation_form_stage[stage='charity'],
+#dd_donation_form #dd_donation_form_main[stage='fees'] .dd_donation_form_stage[stage='fees'],
+#dd_donation_form #dd_donation_form_main[stage='monthly'] .dd_donation_form_stage[stage='monthly'],
+#dd_donation_form #dd_donation_form_main[stage='more_options_scheduled'] .dd_donation_form_stage[stage='more_options_scheduled'],
+#dd_donation_form #dd_donation_form_main[stage='more_options_repeat'] .dd_donation_form_stage[stage='more_options_repeat'],
+#dd_donation_form #dd_donation_form_main[stage='more_options_contact'] .dd_donation_form_stage[stage='more_options_contact'],
+#dd_donation_form #dd_donation_form_main[stage='more_option_pay_today'] .dd_donation_form_stage[stage='more_option_pay_today'],
+#dd_donation_form #dd_donation_form_main[stage='card_declined'] .dd_donation_form_stage[stage='card_declined'],
+#dd_donation_form #dd_donation_form_main[stage='auth_failed'] .dd_donation_form_stage[stage='auth_failed'],
+#dd_donation_form #dd_donation_form_main[stage='card_auth_failed'] .dd_donation_form_stage[stage='card_auth_failed'],
+#dd_donation_form #dd_donation_form_main[stage='giftaid'] .dd_donation_form_stage[stage='giftaid'],
+#dd_donation_form #dd_donation_form_main[stage='3d_secure'] .dd_donation_form_stage[stage='3d_secure'],
+#dd_donation_form #dd_donation_form_main[stage='3d_secure_card'] .dd_donation_form_stage[stage='3d_secure_card'],
+#dd_donation_form #dd_donation_form_main[stage='payment_details'] .dd_donation_form_stage[stage='payment_details'],
+#dd_donation_form #dd_donation_form_main[stage='confirm'] .dd_donation_form_stage[stage='confirm'],
+#dd_donation_form #dd_donation_form_main[stage='processing'] .dd_donation_form_stage[stage='processing'],
+#dd_donation_form #dd_donation_form_main[stage='success'] .dd_donation_form_stage[stage='success'],
+#dd_donation_form #dd_donation_form_main[stage='more_options'] .dd_donation_form_stage[stage='more_options'],
+#dd_donation_form #dd_donation_form_main[stage='error'] .dd_donation_form_stage[stage='error'],
+#dd_donation_form #dd_donation_form_main[stage='amount'] .dd_donation_form_stage[stage='amount'] {
+	opacity: 1;
+	z-index: 2;
+	pointer-events: all;
+	-webkit-transition-delay: 0.25s;
+	-moz-transition-delay: 0.25s;
+	-ms-transition-delay: 0.25s;
+	-o-transition-delay: 0.25s;
+	transition-delay: 0.25s;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage {
+	position: absolute;
+	width: 100%;
+	height: -webkit-calc(100% - 60px);
+	height: -moz-calc(100% - 60px);
+	height: -ms-calc(100% - 60px);
+	height: -o-calc(100% - 60px);
+	height: calc(100% - 60px);
+	padding: 20px 20px 60px 20px;
+	opacity: 0;
+	z-index: 1;
+	pointer-events: none;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage h2 {
+	font-size: 1.6em;
+	margin-bottom: 0.4em;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage p {
+	font-size: 1em;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_group {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin: 0px 0px 4px 0px;
+	text-align: left;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_group label {
+	font-size: 0.9em;
+	color: #303030;
+	text-decoration: none;
+	opacity: 1 !important;
+	pointer-events: all !important;
+	margin: 0px 0px 2px 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage_small,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_mid,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_prev_stage {
+	position: absolute;
+	display: flex;
+	width: -webkit-calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: -ms-calc(100% - 40px);
+	width: -o-calc(100% - 40px);
+	width: calc(100% - 40px);
+	height: 40px;
+	background-color: #1db87f;
+	color: #ffffff;
+	border-radius: 3px;
+	justify-content: center;
+	align-items: center;
+	left: 20px;
+	bottom: 0px;
+	opacity: 0.9;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage.next_disabled {
+	opacity: 0.6;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage:hover,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage_small:hover,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_mid:hover,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_prev_stage:hover {
+	opacity: 1;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_prev_stage:not(.dd_prev_stage_full),
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage_small:not(.dd_prev_stage_full) {
+	background-color: transparent;
+	border: 1px solid #1db87f;
+	color: #1db87f;
+	width: 100px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_stage.dd_next_multi {
+	width: -webkit-calc(100% - 146px);
+	width: -moz-calc(100% - 146px);
+	width: -ms-calc(100% - 146px);
+	width: -o-calc(100% - 146px);
+	width: calc(100% - 146px);
+	left: unset;
+	right: 20px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_mid {
+	width: -webkit-calc(50% + 14px);
+	width: -moz-calc(50% + 14px);
+	width: -ms-calc(50% + 14px);
+	width: -o-calc(50% + 14px);
+	width: calc(50% + 14px);
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_mid:nth-last-child(2) {
+	background-color: transparent;
+	border: 1px solid #1db87f;
+	color: #1db87f;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_next_mid:last-child {
+	left: unset;
+	right: 20px;
+	width: -webkit-calc(50% - 60px);
+	width: -moz-calc(50% - 60px);
+	width: -ms-calc(50% - 60px);
+	width: -o-calc(50% - 60px);
+	width: calc(50% - 60px);
+}
+
+#dd_donation_form #dd_donation_form_main .dd_fee_pay_option {
+	background-color: #ffffff;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_fee_pay_option.hidden {
+	display: none;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_fee_pay_option label {
+	font-size: 0.9em;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_frequency_option {
+	background-color: #ffffff;
+	padding: 8px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.165);
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.165);
+	border: 1px solid rgba(0, 0, 0, 0.0825);
+}
+
+#dd_donation_form #dd_donation_form_main .dd_frequency_option label,
+#dd_donation_form #dd_donation_form_main .dd_custom_option label {
+	font-size: 0.9em;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage input {
+	width: 100%;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_err {
+	position: relative;
+	display: none;
+	margin: -6px 0px 6px 0px;
+	background-color: #f9cdcd;
+	border-radius: 3px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.085);
+	padding: 4px 8px 4px 8px;
+	width: 100%;
+	flex-direction: column;
+	text-align: left;
+	align-items: flex-start;
+	justify-content: flex-start;
+	font-size: 0.9em;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_err.show {
+	display: flex;
+}
+
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input {
+	position: relative;
+	min-height: 18px;
+	margin: 12px 0px 12px 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input label {
+	cursor: pointer;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input label:before {
+	content: '';
+	background: #ffffff;
+	border: 1px solid #1db87f;
+	display: inline-block;
+	border-radius: 3px;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	padding: 0px;
+	margin-left: 0px;
+	margin-right: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input label a {
+	color: #1db87f;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input input[type='checkbox'] {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	margin: 0px 0px 0px 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	z-index: 1;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_checkbox_input input[type='checkbox']:checked + label:before {
+	background-color: #1db87f;
+	font-family: "Font Awesome 5 Free";
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+	font-weight: 900;
+	box-shadow: inset 0px 0px 0px 0px #ffffff;
+	content: "\f00c";
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 18px;
+	z-index: 2;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure_card {
+	border-radius: 4px;
+	overflow: auto;
+	height: 100%;
+	-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.125);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.125);
+	border: 1px solid rgba(0, 0, 0, 0.0825);
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure:empty,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure_card:empty {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure iframe,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage #dd_donation_form_3d_secure_card iframe {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 300px;
+	border: none !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group {
+	display: flex;
+	border: 1px solid rgba(0, 0, 0, 0.125) !important;
+	margin-bottom: 0.6em !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group {
+
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group .date-format {
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	text-align: center;
+	border: none !important;
+	margin-bottom: 0px !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group .date-format:first-child {
+	z-index: 3 !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group .date-format:nth-child(2) {
+	z-index: 2 !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_input_group .date-format:last-child {
+	z-index: 1 !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency {
+	display: flex;
+	flex-direction: row;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group:first-child {
+	width: 100px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0.6em !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group input {
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group input,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group select {
+	margin-bottom: 0px !important;
+	text-align: center;
+	margin-bottom: 0px;
+	height: 45px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group:last-child {
+	width: -webkit-calc(100% - 108px);
+	width: -moz-calc(100% - 108px);
+	width: -ms-calc(100% - 108px);
+	width: -o-calc(100% - 108px);
+	width: calc(100% - 108px);
+	margin-left: 8px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_repeat_anchor .dd_donation_form_group {
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_frequency .dd_donation_form_group label {
+	width: 36px !important;
+	margin-right: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_credit {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 30px;
+	bottom: 0px;
+	left: 0px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 1 !important;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	margin: 18px 0px 12px 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_credit a {
+	font-size: 9px;
+	color: #303030;
+	text-decoration: none;
+	opacity: 1 !important;
+	font-family: sans-serif;
+	pointer-events: all !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_credit span {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 18px;
+	margin: -2px 0px 6px 0px;
+	background-image: url('https://dashdonate.org/img/logo.png') !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 1 !important;
+	pointer-events: all !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	padding: 10px 10px 10px 14px;
+	margin: 0px 0px 20px 0px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.065);
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure {
+	background-color: #e6f2e6;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage {
+	background-color: #fafafa;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure i,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage i {
+	position: relative;
+	display: flex;
+	width: 50px;
+	height: 40px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	margin: 0px 20px 0px 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure i {
+	background-image: url('https://dashdonate.org/img/stripe.svg') !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage i {
+	background-image: url('https://dashdonate.org/img/logo.png') !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure p,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage p {
+	font-size: 10px;
+	line-height: 1.3em;
+	margin: 0px;
+	width: 100%;
+	text-align: left;
+	color: #424242;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_secure a,
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage .dd_donation_form_stage_manage a {
+	text-decoration: none;
+	color: #000000;
+}
+
+
+
+
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles {
+	display: flex;
+	flex-direction: row;
+	margin: 12px 0px 12px 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles .dd_donate_style {
+	position: relative;
+	display: flex;
+	width: 50%;
+	height: auto;
+	min-height: 40px;
+	justify-content: center;
+	padding: 8px 12px 8px 12px;
+	background-color: transparent;
+	color: #1db87f;
+	border: 1px solid #1db87f;
+	border-radius: 3px;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.9;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.25s;
+	-moz-transition: opacity 0.25s;
+	-ms-transition: opacity 0.25s;
+	-o-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles .dd_donate_style.selected {
+	background-color: #1db87f;
+	color: #ffffff;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles .dd_donate_style:first-child {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles .dd_donate_style:last-child {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donation_form_stage[stage='amount'] .dd_donate_styles .dd_donate_style:hover {
+	opacity: 1;
+}
+
+
+
+
+
+#dd_donation_form #dd_donation_form_main .dd_amount_group {
+	background-color: #ffffff;
+	display: flex;
+	border: 1px solid rgba(0, 0, 0, 0.125) !important;
+	margin-bottom: 0.6em !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+	justify-content: center;
+	align-items: center;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_group label {
+	position: relative;
+	display: flex;
+	width: auto;
+	height: 100%;
+	padding: 0px 0px 0px 16px;
+	justify-content: center;
+	align-content: center;
+	font-size: 1.4em;
+	margin: 0px !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_group input {
+	border: none !important;
+	margin-bottom: 0px !important;
+	border-radius: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	padding: 12px 16px 12px 4px !important;
+	font-size: 1.6em !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_suggestions {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 2px -4px 4px -4px !important;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_suggestions .dd_amount_suggestion {
+	flex-grow: 1;
+	margin: 4px;
+	background-color: #ffffff;
+	padding: 8px 12px;
+	display: flex;
+	min-width: 80px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	font-size: 1em;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.125) !important;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	cursor: pointer;
+	opacity: 0.9;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.125s;
+	-moz-transition: opacity 0.125s;
+	-ms-transition: opacity 0.125s;
+	-o-transition: opacity 0.125s;
+	transition: opacity 0.125s;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_suggestions .dd_amount_suggestion:hover {
+	opacity: 1;
+	background-color: #efefef;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_amount_suggestions .dd_amount_suggestion:active {
+	background-color: #1db87f;
+	color: #ffffff;
+}
+
+
+
+
+#dd_donation_form #dd_donation_form_main .dd_input_label {
+	margin: 6px 0px 2px 0px;
+	font-size: 0.9em !important;
+	text-align: left;
+}
+
+#dd_donation_form #dd_donation_form_main .dd_donate_suggestion {
+	margin: 6px 0px 2px 0px;
+	text-align: left;
+}
+
+
+
+
+#dd_donation_form #dd_donation_form_main .dd_custom_option {
+	background-color: #ffffff;
+	padding: 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+}
+
+#dd_donation_form #dd_donation_form_main input[type='number'] {
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	-ms-appearance: textfield;
+	-o-appearance: textfield;
+	appearance: textfield;
+}
+
+#dd_donation_form #dd_donation_form_main input::-webkit-outer-spin-button, #dd_donation_form #dd_donation_form_main input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}

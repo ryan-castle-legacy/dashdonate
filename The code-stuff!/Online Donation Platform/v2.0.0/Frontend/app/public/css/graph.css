@@ -1,0 +1,106 @@
+
+.graphiq {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+}
+.graphiq__graph-layout {
+  -webkit-box-flex: 1;
+          flex: 1;
+  overflow-x: hidden;
+}
+.graphiq__graph-values {
+  font-size: 0.75em;
+  padding-right: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1.25em;
+  text-align: right;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none !important;
+}
+.graphiq__line {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+.graphiq__graph-key {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+.graphiq__graph-key .key {
+  font-size: 0.75em;
+  text-align: center;
+  display: block;
+}
+.graphiq__y-division {
+  fill: none;
+  stroke-miterlimit: 10;
+  z-index: -1;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+.graphiq__graph-dot {
+  -webkit-transition: stroke-width ease-in-out 0.2s;
+  transition: stroke-width ease-in-out 0.2s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.graphiq__value-dialog {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  font-size: 0.75em;
+  line-height: 1.4em;
+  padding: 4px 6px;
+  margin-top: -10px;
+  border-radius: 3px;
+  border: 1px solid #1db87f;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.0825);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.0825);
+  font-weight: normal;
+  -webkit-animation: float 0.3s ease-out forwards;
+          animation: float 0.3s ease-out forwards;
+		  z-index: 3;
+}
+
+@-webkit-keyframes float {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY();
+            transform: translateY();
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY();
+            transform: translateY();
+  }
+}
+.graphiq__graph {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}

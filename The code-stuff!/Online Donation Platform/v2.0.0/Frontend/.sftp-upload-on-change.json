@@ -1,0 +1,14 @@
+{
+	"local":	{
+		"source":		"/"
+	},
+	"remote":	{
+		"target":		"/var/www/",
+		"host":			"xxxx",
+		"port":			"22",
+		"username":		"root",
+		"password":		"xxxx",
+		"keyfile": 		"xxxx",
+		"passphrase":	"xxxx"
+	}
+}
