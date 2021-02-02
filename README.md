@@ -39,4 +39,4 @@ Just have fun!
 Any funding will be used to keep my website up and running so that others can be inspired by my legacy, stories, and the blog.
 
 
-[Fundraising - thank you!](https://www.gofundme.com/f/ryans-hopeful-legacy/)
+[Fundraising - thank you!](https://ryancastle.co.uk/donation)
