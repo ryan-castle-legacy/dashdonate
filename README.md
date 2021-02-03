@@ -36,6 +36,10 @@ Just have fun!
 
 —
 
+If you ever think that you would use this domain (for DashDonate.org), please get in touch - hello@ryancastle.co.uk
+
+—
+
 Any funding will be used to keep my website up and running so that others can be inspired by my legacy, stories, and the blog.
 
 
